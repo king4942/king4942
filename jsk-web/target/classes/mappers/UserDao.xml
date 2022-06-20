@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.king.dao.UserDao">
+
+    <select id="loginSelect" resultType="com.king.main.User">
+        select id,name,email,password,del from login_user where name = #{name} and del = 1
+    </select>
+
+</mapper>
